@@ -70,7 +70,7 @@ class _UserListScreenState extends State<UserListScreen> {
                   if (isSearching && querycont.text != '') {
                     querylist = querylist
                         .where(
-                          (element) => element.firstname.contains(querycont.text),
+                          (element) => ("${element.firstname} ${element.secondname}").contains(querycont.text),
                         )
                         .toList();
                   }
